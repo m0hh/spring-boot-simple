@@ -1,0 +1,14 @@
+server:
+  servlet:
+    context-path: /api
+
+  error:
+    include-binding-errors: always
+    include-message: always
+
+app:
+  datasource:
+    jdbc-url: jdbc:postgresql://localhost:5332/amigoscodedemo
+    username: postgres
+    password: password
+    pool-size: 30
