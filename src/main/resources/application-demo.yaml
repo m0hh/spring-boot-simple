@@ -1,8 +1,5 @@
-spring:
-  profiles:
-    active:
-      demo
 server:
+  port: 5000
   servlet:
     context-path: /api
 
@@ -12,7 +9,7 @@ server:
 
 app:
   datasource:
-    jdbc-url: jdbc:postgresql://localhost:5332/amigoscodedemo
-    username: postgres
-    password: password
+    jdbc-url:
+    username:
+    password:
     pool-size: 30

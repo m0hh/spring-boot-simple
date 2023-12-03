@@ -1,5 +1,6 @@
 package com.mohamed.fullstack.StudentCourse;
 
+import java.time.LocalDate;
 import java.util.UUID;
 
 public class StudentCourse {
@@ -11,8 +12,8 @@ public class StudentCourse {
     private  final String gender;
 
     private final UUID course_id;
-    private final String course_start_date;
-    private final String course_end_date;
+    private final LocalDate course_start_date;
+    private final LocalDate course_end_date;
     private final Integer course_grade;
 
     private final String  course_name;
@@ -39,8 +40,8 @@ public class StudentCourse {
         this.email = email;
         this.gender = gender;
         this.course_id = course_id;
-        this.course_start_date = course_start_date;
-        this.course_end_date = course_end_date;
+        this.course_start_date = LocalDate.parse(course_start_date);
+        this.course_end_date = LocalDate.parse(course_end_date);
         this.course_grade = course_grade;
         this.course_name = course_name;
         this.course_description = course_description;
@@ -72,11 +73,11 @@ public class StudentCourse {
         return course_id;
     }
 
-    public String getCourse_start_date() {
+    public LocalDate getCourse_start_date() {
         return course_start_date;
     }
 
-    public String getCourse_end_date() {
+    public LocalDate getCourse_end_date() {
         return course_end_date;
     }
 

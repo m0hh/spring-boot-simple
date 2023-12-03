@@ -16,9 +16,9 @@ public class StudentCourseController {
         this.studentCourseService = studentCourseService;
     }
 
-    @GetMapping
-    public List<StudentCourse> getStudentCourse(@RequestParam String uuid){
-        return studentCourseService.getStudentById(uuid);
+    @GetMapping(path = "{studentId}")
+    public List<StudentCourse>  getStudentCourse(@PathVariable("studentId") String studentId){
+        return studentCourseService.getStudentById(studentId);
 
     }
 }
